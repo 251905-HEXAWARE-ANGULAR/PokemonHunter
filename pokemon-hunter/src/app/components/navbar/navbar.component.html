@@ -1,24 +1,23 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <ul class="navbar-nav">
+        <li>
+            <a class="nav-link d-flex align-items-center">
+                <img src="pokeball.png" alt="pokeball-image" height="50">
+                <h2 class="m-2">Pokemon Hunter</h2>
+            </a>
+        </li>
+        <li>
+            <a class="nav-link mt-2 fs-5" routerLink="/home">
+                [Home]
+            </a>
+        </li>
+        <li>
+            <a class="nav-link mt-2 fs-5" routerLink="/catch">
+                [Catch]
+            </a>
+        </li>
+    </ul>
+</nav>
 
-<ul>
-    
-    <li>
-        <a>
-            <img src="pokeball.png" alt="pokeball-image">
-            <h2>Pokemon Hunter</h2>
-        </a>
-    </li>
-
-    <li>
-        <a routerLink="/home">
-            [Home]
-        </a>
-    </li>
-
-    <li>
-        <a routerLink="/catch">
-            [Catch]
-        </a>
-    </li>
-
-</ul>
+<!-- This navbar component is ripped from the bootstrap navbar template... which is the point! -->
+ <!-- NOTE: remember routerLink is what lets us change the URL programmatically with a click -->
