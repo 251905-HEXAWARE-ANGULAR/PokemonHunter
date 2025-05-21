@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

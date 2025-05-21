@@ -23,6 +23,7 @@ export class CatchComponent {
     this.getPokemon()
   }
 
+  //Getting Pokemon from PokeAPI to render on the page
   getPokemon(){
 
     //When we get an Observable, we have t0 SUBSCRIBE to it to get the newest incoming data
@@ -34,6 +35,21 @@ export class CatchComponent {
 
       console.log(this.pokeArray)
     })
+
+  }
+
+
+  //Catch a Pokemon (remove the pokemon from this Array, and push it into the PokemonService array)
+  catchPokemon(pokemon:Pokemon){
+
+    //push the pokemon into the Service Array (caughtPokemon)
+    this.pokemonService.caughtPokemon.push(pokemon)
+
+    //remove the caught pokemon from the array (taking it out of the user's view)
+    this.pokeArray.splice(this.pokeArray.indexOf(pokemon), 1)
+    //1? this means delete one element starting from the found index
+
+    alert(pokemon.name + " was caught!")
 
   }
 

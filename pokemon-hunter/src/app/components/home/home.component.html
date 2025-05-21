@@ -1,3 +1,17 @@
-<h2>Welcome Trainer!</h2>
+<div class="container-fluid">
+    <h2>Welcome Trainer!</h2>
 
-<h5>You have {{this.pokemonService.caughtPokemon.length}} Pokemon</h5>
+    <h5>You have {{this.pokemonService.caughtPokemon.length}} Pokemon</h5>
+
+    <h3 class="mt-5 border-bottom">Caught Pokemon:</h3>
+
+    <!-- Using *ngFor ro render a pokemon for every element in the caughtPokemon Array from PokemonService -->
+    <div class="d-flex flex-wrap">
+        <div *ngFor="let pokemon of this.pokemonService.caughtPokemon">
+            <img [src]="pokemon.sprite" alt="">
+        </div>
+    </div>
+
+
+
+</div>
