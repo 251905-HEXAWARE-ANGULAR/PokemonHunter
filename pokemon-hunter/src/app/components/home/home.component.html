@@ -8,7 +8,7 @@
     <!-- Using *ngFor ro render a pokemon for every element in the caughtPokemon Array from PokemonService -->
     <div class="d-flex flex-wrap">
         <div *ngFor="let pokemon of this.pokemonService.caughtPokemon">
-            <img [src]="pokemon.sprite" alt="">
+            <app-pokemoncard [pokemon]="pokemon"/>
         </div>
     </div>
 

@@ -26,16 +26,34 @@ export class CatchComponent {
   //Getting Pokemon from PokeAPI to render on the page
   getPokemon(){
 
+    if(this.pokeArray.length !== 0){
+      this.pokeArray.length = 0
+    }
+
     //When we get an Observable, we have t0 SUBSCRIBE to it to get the newest incoming data
     //Once we subscribe, we can push the extracted data into whatever variable/function it needs to be used in
-    this.pokemonService.getRandomPokemon().subscribe(data => {
-      console.log(data)
-      //push the pokemon data into our Array (pokeArray)
-      this.pokeArray.push(data)
+    for(let i = 0; i < 4; i++){
+      this.pokemonService.getRandomPokemon().subscribe(data => {
+          console.log(data)
+          //push the pokemon data into our Array (pokeArray)
+          this.pokeArray.push(data)
+          console.log(this.pokeArray)
+        })
+    }
+  }
 
-      console.log(this.pokeArray)
-    })
+  //Generates a random positional style 
+  //(This will get applied for each render pokemon)
+  getRandomPosition(){
+    const randomTop = Math.floor(Math.random() * 50 + 20) + '%'
+    const randomLeft = Math.floor(Math.random() * 50) + '%'
 
+    //return a style - we'll use this in the HTML with [ngStyle] - an attribute directive!
+    return {
+      position: "absolute",
+      top: randomTop,
+      left: randomLeft
+    }
   }
 
 

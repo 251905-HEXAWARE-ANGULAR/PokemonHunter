@@ -2,12 +2,12 @@
 
     <div>
         <h3>Click a Pokemon to catch it!</h3>
-        <button class="btn btn-dark">Reshuffle</button>
+        <button (click)="getPokemon()" class="btn btn-dark">Reshuffle</button>
     </div>
 
 
     <div *ngFor="let pokemon of pokeArray">
-        <img [src]="pokemon.sprite" alt="pokepic" (click)="catchPokemon(pokemon)">
+        <img [src]="pokemon.sprite" alt="pokepic" (click)="catchPokemon(pokemon)" [ngStyle]="getRandomPosition()">
     </div>
 
 </div>
