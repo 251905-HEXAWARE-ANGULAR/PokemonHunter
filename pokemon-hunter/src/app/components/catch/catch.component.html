@@ -1,7 +1,13 @@
-<p>catch works!</p>
+<div class="container-fluid">
+
+    <div>
+        <h3>Click a Pokemon to catch it!</h3>
+        <button class="btn btn-dark">Reshuffle</button>
+    </div>
 
 
-<div *ngFor="let pokemon of pokeArray">
-    <p>{{pokemon.name}}</p>
-    <p>{{pokemon.id}}</p>
+    <div *ngFor="let pokemon of pokeArray">
+        <img [src]="pokemon.sprite" alt="pokepic" (click)="catchPokemon(pokemon)">
+    </div>
+
 </div>
