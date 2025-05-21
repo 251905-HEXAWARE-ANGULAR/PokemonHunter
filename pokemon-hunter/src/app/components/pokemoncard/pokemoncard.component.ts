@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Pokemon } from '../../interfaces/pokemon.interface';
+import { TitleCasePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-pokemoncard',
-  imports: [],
+  imports: [TitleCasePipe],
   templateUrl: './pokemoncard.component.html',
   styleUrl: './pokemoncard.component.css'
 })
