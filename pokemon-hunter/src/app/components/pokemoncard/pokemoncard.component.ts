@@ -15,4 +15,10 @@ export class PokemoncardComponent {
 
   //"!" to tell the compiler "stop yelling at us, we WILL supply a value for this variable at compile time" 
 
+//Just showing ngOnChanges in action - this invokes every time @Input pokemon changes
+
+  // ngOnChanges(){
+  //   alert("pokemon @Input changed")
+  // }
+
 }
