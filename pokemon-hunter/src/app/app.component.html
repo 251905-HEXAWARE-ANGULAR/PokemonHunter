@@ -1,5 +1,5 @@
 <!-- Statically display the navbar component, since we always want to see it -->
-<app-navbar/>
+<app-navbar *ngIf="router.url !== '/'"/>
 
 <!-- Check app.routes.ts to see what component is tied to what route -->
 <!-- We need this here for routes to work!! -->
