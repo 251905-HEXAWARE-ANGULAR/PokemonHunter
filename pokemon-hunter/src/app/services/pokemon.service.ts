@@ -15,7 +15,6 @@ export class PokemonService {
   constructor(private http:HttpClient) { }
 
   //Method to fetch one random pokemon
- //TODO: this is harcoded to pikachu for now
   getRandomPokemon():Observable<Pokemon> {
     
     //Getting a random number up to 1025 (the last pokemon id) so we can get a random pokemon below

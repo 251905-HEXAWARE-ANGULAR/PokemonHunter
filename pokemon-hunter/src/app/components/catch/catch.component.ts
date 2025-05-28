@@ -67,6 +67,8 @@ export class CatchComponent {
     this.pokeArray.splice(this.pokeArray.indexOf(pokemon), 1)
     //1? this means delete one element starting from the found index
 
+    //TODO: This is a "side effect" of catching a pokemon
+    //TODO: We could have used a Signal attached to some message variable to get this display through an effect instead (as well other stuff)
     alert(pokemon.name + " was caught!")
 
   }
