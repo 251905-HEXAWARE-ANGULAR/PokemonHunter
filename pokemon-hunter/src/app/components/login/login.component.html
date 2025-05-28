@@ -6,11 +6,11 @@
             <h1>Welcome! Log in to catch Pokemon:</h1>
         </div>
 
-        <input class="form-control mb-2" type="text" placeholder="username">
-        <input class="form-control mb-2" type="password" placeholder="password">
+        <input class="form-control mb-2" type="text" placeholder="username" [(ngModel)]="username">
+        <input class="form-control mb-2" type="password" placeholder="password" [(ngModel)]="password">
 
         <div class="d-flex justify-content-center">
-            <button class="btn btn-dark btn-lg w-25">Log In</button>
+            <button class="btn btn-dark btn-lg w-25" (click)="loginHardcoded()">Log In</button>
         </div>
 
     </div>
